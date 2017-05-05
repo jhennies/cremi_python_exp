@@ -6,17 +6,22 @@ import os
 # Load stuff
 source_folder = '/mnt/localdata01/jhennies/neuraldata/cremi_2016/170321_resolve_false_merges/'
 project_folder = '/mnt/localdata01/jhennies/neuraldata/results/multicut_workflow/170425_all_samples_lifted_more_trees/'
+# TODO: Change here
 experiment_folder = os.path.join(project_folder, 'splA_z0/')
 
 mc_result_filepath = os.path.join(experiment_folder, 'result.h5')
+# TODO: Change here when switching half
 mc_result_key = 'z/0/data'
 
+# TODO: Change here when switching result
 glob_result_filepath = os.path.join(experiment_folder, 'result_resolved_global.h5')
 glob_result_key = mc_result_key
 loc_result_filepath = os.path.join(experiment_folder, 'result_resolved_local.h5')
 loc_result_key = mc_result_key
 
+# TODO: Change here when switching sample
 gt_filepath = os.path.join(source_folder, 'cremi.splA.train.raw_neurons.crop.axes_xyz.split_z.h5')
+# TODO: Change here when switching half
 gt_key = 'z/0/neuron_ids'
 
 mc_result = vigra.readHDF5(mc_result_filepath, mc_result_key)
